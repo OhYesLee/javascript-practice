@@ -25,7 +25,7 @@ let players = {
 
 // Randomly choose between rock, paper, scissors
 function choose() {
-  const choices = ["rock", "paper", "scissors"];
+  const choices = ["바위", "보", "가위"];
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
@@ -36,9 +36,9 @@ function game(player1, player2) {
 
   if (p1 === p2) return null; // tie
   if (
-    (p1 === "rock" && p2 === "scissors") ||
-    (p1 === "scissors" && p2 === "paper") ||
-    (p1 === "paper" && p2 === "rock")
+    (p1 === "바위" && p2 === "가위") ||
+    (p1 === "가위" && p2 === "보") ||
+    (p1 === "보" && p2 === "바위")
   ) {
     return player1;
   } else {
