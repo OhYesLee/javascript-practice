@@ -12,6 +12,12 @@ let player = {
   c: { wins: 0, streak: 0, total: 0, winningGames: [] },
 };
 
+// 무작위로 가위 바위 보 선택하는 함수
+function choose() {
+  const choices = ["바위", "보", "가위"];
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
 // 개임 방법 정하기
 function game(player1, player2) {
   let p1 = choose();
@@ -28,3 +34,5 @@ function game(player1, player2) {
     return player2;
   }
 }
+
+// 1000번 게임돌리기
